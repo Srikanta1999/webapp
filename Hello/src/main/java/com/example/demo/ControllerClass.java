@@ -4,7 +4,8 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class ControllerClass {
+	@GetMapping("\welcome")
 public String getMap() {
-	return "hello";
+	return "welcome";
 }
 }
