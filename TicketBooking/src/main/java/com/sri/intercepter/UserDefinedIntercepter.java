@@ -15,7 +15,7 @@ public class UserDefinedIntercepter implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		int hour=LocalDateTime.now().getHour();
-		if(hour>10) {
+		if(hour>20) {
 			System.err.println(hour);
 			RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/pages/error/RestrictionPeriod.jsp");
 			rd.forward(request, response);
